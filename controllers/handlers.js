@@ -2,7 +2,6 @@ const Board = require("../models");
 const mongoose = require("mongoose");
 const ObjectId = mongoose.Types.ObjectId;
 
-// done
 async function getThreads(req, res) {
   const board = req.params.board;
 
@@ -38,11 +37,9 @@ async function createThread(req, res) {
     }
   );
 
-  // TODO: bug url missing the last character nana -> nan
   res.redirect(`/b/${board}/`);
 }
 
-// done
 async function updateThread(req, res) {
   const { report_id } = req.body;
   const board = req.body.board || req.params.board;
@@ -62,7 +59,6 @@ async function updateThread(req, res) {
   res.json("reported");
 }
 
-// done
 async function deleteThread(req, res) {
   const { thread_id, delete_password } = req.body;
   const { board } = req.params;
@@ -89,7 +85,6 @@ async function deleteThread(req, res) {
   res.json("success");
 }
 
-// done
 async function getReplies(req, res) {
   const { board } = req.params;
   const { thread_id } = req.query;
@@ -118,7 +113,6 @@ async function getReplies(req, res) {
   }
 }
 
-// done
 async function createReply(req, res) {
   const { board } = req.params;
   const { thread_id, text, delete_password } = req.body;
@@ -145,7 +139,6 @@ async function createReply(req, res) {
   res.redirect(`/b/${board}/${thread_id}`);
 }
 
-// done
 async function updateReply(req, res) {
   const { board } = req.params;
   const { thread_id, reply_id } = req.body;
@@ -176,7 +169,6 @@ async function updateReply(req, res) {
   res.json("reported");
 }
 
-// done
 async function deleteReply(req, res) {
   // Not delete reply, just update text to `[deleted]`
   const { board } = req.params;
