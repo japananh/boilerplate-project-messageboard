@@ -42,7 +42,7 @@ app.use(
       action: "sameorigin",
     },
     referrerPolicy: {
-      policy: "sameorigin",
+      policy: "same-origin",
     },
   })
 );
