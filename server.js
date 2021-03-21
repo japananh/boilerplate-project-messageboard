@@ -25,13 +25,13 @@ app.use(
           "'self'",
           "'unsafe-inline'",
           "http://localhost:3000",
-          "https://fcc-messageboard-app.herokuapp.com/",
+          "https://fcc-messageboard.herokuapp.com/",
         ],
         scriptSrc: [
           "'self'",
           "'unsafe-inline'",
           "http://localhost:3000",
-          "https://fcc-messageboard-app.herokuapp.com/",
+          "https://fcc-messageboard.herokuapp.com/",
           "https://code.jquery.com/jquery-2.2.1.min.js",
         ],
       },
@@ -42,7 +42,7 @@ app.use(
       action: "sameorigin",
     },
     referrerPolicy: {
-      policy: ["origin"],
+      policy: "sameorigin",
     },
   })
 );
