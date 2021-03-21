@@ -39,7 +39,10 @@ app.use(
     xssFilter: true,
     hidePoweredBy: true,
     frameguard: {
-      action: "deny",
+      action: "sameorigin",
+    },
+    referrerPolicy: {
+      policy: ["origin"],
     },
   })
 );
